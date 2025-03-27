@@ -1,0 +1,542 @@
+{
+	"info": {
+		"_postman_id": "bf922978-c0ca-46d7-886e-eb028b8c81e8",
+		"name": "Author Endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36863660",
+		"_collection_link": "https://www.postman.com/lunar-desert-24788-1/workspace/backend-ex-hqsoft/collection/36863660-bf922978-c0ca-46d7-886e-eb028b8c81e8?action=share&source=collection_link&creator=36863660"
+	},
+	"item": [
+		{
+			"name": "Create author",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Kieu Thanh Phat\",\r\n    \"Bio\" : \"No pain no gain\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host}}/{{AuthorEndpoint}}/insert",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"{{AuthorEndpoint}}",
+						"insert"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success - 1",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Kieu Thanh Phat\",\r\n    \"Bio\" : \"No pain no gain\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/{{AuthorEndpoint}}/insert",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{AuthorEndpoint}}",
+								"insert"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Mar 2025 23:57:27 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Create new author successful\",\n    \"data\": {\n        \"authorId\": 1,\n        \"name\": \"Kieu Thanh Phat\",\n        \"bio\": \"No pain no gain\",\n        \"books\": null\n    }\n}"
+				},
+				{
+					"name": "Error - Miss \"Name\"",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \r\n    \"Bio\" : \"No pain no gain\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/{{AuthorEndpoint}}/insert",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{AuthorEndpoint}}",
+								"insert"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/problem+json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Mar 2025 23:58:16 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"errors\": {\n        \"Name\": [\n            \"The Name field is required.\"\n        ]\n    },\n    \"traceId\": \"00-3ed0e1ef50d34a72992e927e7d66b08f-b24c3fc70c1267d6-00\"\n}"
+				},
+				{
+					"name": "Success  - 2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"Nguyen Van A\",\r\n    \"Bio\" : \"hello\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/{{AuthorEndpoint}}/insert",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{AuthorEndpoint}}",
+								"insert"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 00:01:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Create new author successful\",\n    \"data\": {\n        \"authorId\": 2,\n        \"name\": \"Nguyen Van A\",\n        \"bio\": \"hello\",\n        \"books\": null\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get All Author",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Host}}/{{AuthorEndpoint}}/fetch",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"{{AuthorEndpoint}}",
+						"fetch"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Author",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/{{AuthorEndpoint}}/fetch",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{AuthorEndpoint}}",
+								"fetch"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 00:33:41 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Get all author success\",\n    \"length\": 3,\n    \"data\": [\n        {\n            \"authorId\": 1,\n            \"name\": \"Kieu Thanh Phat - Px4\",\n            \"bio\": \"No pain no gain !\",\n            \"books\": null\n        },\n        {\n            \"authorId\": 2,\n            \"name\": \"Nguyen Van A\",\n            \"bio\": \"hello\",\n            \"books\": null\n        },\n        {\n            \"authorId\": 3,\n            \"name\": \"Nguyen Van B3\",\n            \"bio\": \"No pain no gain\",\n            \"books\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Host}}/{{AuthorEndpoint}}/fetch/1",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"{{AuthorEndpoint}}",
+						"fetch",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/{{AuthorEndpoint}}/fetch",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{AuthorEndpoint}}",
+								"fetch"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 00:01:43 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Get all author success\",\n    \"length\": 2,\n    \"data\": [\n        {\n            \"authorId\": 1,\n            \"name\": \"Kieu Thanh Phat\",\n            \"bio\": \"No pain no gain\",\n            \"books\": null\n        },\n        {\n            \"authorId\": 2,\n            \"name\": \"Nguyen Van A\",\n            \"bio\": \"hello\",\n            \"books\": null\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Put author",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorId\": 1,\r\n    \"name\": \"Kieu Thanh Phat - Px4\",\r\n    \"bio\": \"No pain no gain !\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host}}/{{AuthorEndpoint}}/update",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"{{AuthorEndpoint}}",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "put success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"authorId\": 1,\r\n    \"name\": \"Kieu Thanh Phat - Px4\",\r\n    \"bio\": \"No pain no gain !\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/{{AuthorEndpoint}}/update",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{AuthorEndpoint}}",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 00:33:06 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Update author successful\",\n    \"data\": {\n        \"authorId\": 1,\n        \"name\": \"Kieu Thanh Phat - Px4\",\n        \"bio\": \"No pain no gain !\",\n        \"books\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorId\": 1,\r\n    \"name\": \"Kieu Thanh Phat - Px4\",\r\n    \"bio\": \"No pain no gain !\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host}}/{{AuthorEndpoint}}/3",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"{{AuthorEndpoint}}",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"authorId\": 1,\r\n    \"name\": \"Kieu Thanh Phat - Px4\",\r\n    \"bio\": \"No pain no gain !\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/{{AuthorEndpoint}}/3",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{AuthorEndpoint}}",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 00:34:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Delete author successful\",\n    \"data\": {\n        \"authorId\": 3,\n        \"name\": \"Nguyen Van B3\",\n        \"bio\": \"No pain no gain\",\n        \"books\": []\n    }\n}"
+				},
+				{
+					"name": "Put author Copy",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"authorId\": 1,\r\n    \"name\": \"Kieu Thanh Phat - Px4\",\r\n    \"bio\": \"No pain no gain !\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/{{AuthorEndpoint}}/3",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{AuthorEndpoint}}",
+								"3"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 00:34:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Author not exists\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Host",
+			"value": "https://localhost:7000",
+			"type": "string"
+		},
+		{
+			"key": "AuthorEndpoint",
+			"value": "api/authors",
+			"type": "string"
+		}
+	]
+}

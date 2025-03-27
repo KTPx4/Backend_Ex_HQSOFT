@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Job\\Ex code\\HQSOFT\\Backend_Ex_HQSOFT\\Ex1\\ManageBook\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0AED4DA8-8D0D-435D-A769-34EC396A52DB}|ManageBook\\BookStore.csproj|e:\\job\\ex code\\hqsoft\\backend_ex_hqsoft\\ex1\\managebook\\managebook\\data\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AED4DA8-8D0D-435D-A769-34EC396A52DB}|ManageBook\\BookStore.csproj|solutionrelative:managebook\\data\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AED4DA8-8D0D-435D-A769-34EC396A52DB}|ManageBook\\BookStore.csproj|e:\\job\\ex code\\hqsoft\\backend_ex_hqsoft\\ex1\\managebook\\managebook\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AED4DA8-8D0D-435D-A769-34EC396A52DB}|ManageBook\\BookStore.csproj|solutionrelative:managebook\\services\\reportservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AED4DA8-8D0D-435D-A769-34EC396A52DB}|ManageBook\\BookStore.csproj|e:\\job\\ex code\\hqsoft\\backend_ex_hqsoft\\ex1\\managebook\\managebook\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AED4DA8-8D0D-435D-A769-34EC396A52DB}|ManageBook\\BookStore.csproj|solutionrelative:managebook\\controllers\\reportcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AED4DA8-8D0D-435D-A769-34EC396A52DB}|ManageBook\\BookStore.csproj|e:\\job\\ex code\\hqsoft\\backend_ex_hqsoft\\ex1\\managebook\\managebook\\configs\\serviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AED4DA8-8D0D-435D-A769-34EC396A52DB}|ManageBook\\BookStore.csproj|solutionrelative:managebook\\configs\\serviceconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AED4DA8-8D0D-435D-A769-34EC396A52DB}|ManageBook\\BookStore.csproj|e:\\job\\ex code\\hqsoft\\backend_ex_hqsoft\\ex1\\managebook\\managebook\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AED4DA8-8D0D-435D-A769-34EC396A52DB}|ManageBook\\BookStore.csproj|solutionrelative:managebook\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ServiceConfiguration.cs",
+              "DocumentMoniker": "E:\\Job\\Ex code\\HQSOFT\\Backend_Ex_HQSOFT\\Ex1\\ManageBook\\ManageBook\\Configs\\ServiceConfiguration.cs",
+              "RelativeDocumentMoniker": "ManageBook\\Configs\\ServiceConfiguration.cs",
+              "ToolTip": "E:\\Job\\Ex code\\HQSOFT\\Backend_Ex_HQSOFT\\Ex1\\ManageBook\\ManageBook\\Configs\\ServiceConfiguration.cs",
+              "RelativeToolTip": "ManageBook\\Configs\\ServiceConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T01:40:24.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "E:\\Job\\Ex code\\HQSOFT\\Backend_Ex_HQSOFT\\Ex1\\ManageBook\\ManageBook\\Services\\BookService.cs",
+              "RelativeDocumentMoniker": "ManageBook\\Services\\BookService.cs",
+              "ToolTip": "E:\\Job\\Ex code\\HQSOFT\\Backend_Ex_HQSOFT\\Ex1\\ManageBook\\ManageBook\\Services\\BookService.cs",
+              "RelativeToolTip": "ManageBook\\Services\\BookService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T01:35:47.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportService.cs",
+              "DocumentMoniker": "E:\\Job\\Ex code\\HQSOFT\\Backend_Ex_HQSOFT\\Ex1\\ManageBook\\ManageBook\\Services\\ReportService.cs",
+              "RelativeDocumentMoniker": "ManageBook\\Services\\ReportService.cs",
+              "ToolTip": "E:\\Job\\Ex code\\HQSOFT\\Backend_Ex_HQSOFT\\Ex1\\ManageBook\\ManageBook\\Services\\ReportService.cs",
+              "RelativeToolTip": "ManageBook\\Services\\ReportService.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAiwBAAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T01:35:39.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "APIDBContext.cs",
+              "DocumentMoniker": "E:\\Job\\Ex code\\HQSOFT\\Backend_Ex_HQSOFT\\Ex1\\ManageBook\\ManageBook\\Data\\APIDBContext.cs",
+              "RelativeDocumentMoniker": "ManageBook\\Data\\APIDBContext.cs",
+              "ToolTip": "E:\\Job\\Ex code\\HQSOFT\\Backend_Ex_HQSOFT\\Ex1\\ManageBook\\ManageBook\\Data\\APIDBContext.cs",
+              "RelativeToolTip": "ManageBook\\Data\\APIDBContext.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAkwFoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T01:34:56.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReportController.cs",
+              "DocumentMoniker": "E:\\Job\\Ex code\\HQSOFT\\Backend_Ex_HQSOFT\\Ex1\\ManageBook\\ManageBook\\Controllers\\ReportController.cs",
+              "RelativeDocumentMoniker": "ManageBook\\Controllers\\ReportController.cs",
+              "ToolTip": "E:\\Job\\Ex code\\HQSOFT\\Backend_Ex_HQSOFT\\Ex1\\ManageBook\\ManageBook\\Controllers\\ReportController.cs",
+              "RelativeToolTip": "ManageBook\\Controllers\\ReportController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T01:34:22.607Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
