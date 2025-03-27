@@ -1,0 +1,445 @@
+{
+	"info": {
+		"_postman_id": "84e3f15a-7be0-4360-b460-cb8682d2bbe7",
+		"name": "Book Endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36863660",
+		"_collection_link": "https://www.postman.com/lunar-desert-24788-1/workspace/backend-ex-hqsoft/collection/36863660-84e3f15a-7be0-4360-b460-cb8682d2bbe7?action=share&source=collection_link&creator=36863660"
+	},
+	"item": [
+		{
+			"name": "Create book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"title\": \"Chiều nắng tà\",\r\n    \"price\": 999.99,\r\n    \"authorId\": 1,\r\n    \"publishedDate\": \"2025-01-02T00:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host}}/{{BookEndpoint}}/insert",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"{{BookEndpoint}}",
+						"insert"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create book success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"title\": \"Chân trời rực rỡ\",\r\n    \"price\": 999.99,\r\n    \"authorId\": 1,\r\n    \"publishedDate\": \"2025-01-02T00:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/{{BookEndpoint}}/insert",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{BookEndpoint}}",
+								"insert"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 01:02:35 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Create new book successful\",\n    \"data\": {\n        \"bookId\": 2,\n        \"title\": \"Chân trời rực rỡ\",\n        \"price\": 999.99,\n        \"authorId\": 1,\n        \"author\": {\n            \"authorId\": 1,\n            \"name\": \"Kieu Thanh Phat - Px4\",\n            \"bio\": \"No pain no gain !\",\n            \"books\": [\n                {\n                    \"bookId\": 1,\n                    \"title\": \"Một ngàn câu hỏi vì sao\",\n                    \"price\": 133.23,\n                    \"authorId\": 1,\n                    \"author\": null,\n                    \"publishedDate\": \"2024-12-22T00:00:00\"\n                }\n            ]\n        },\n        \"publishedDate\": \"2025-01-02T00:00:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Get all book",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Host}}/{{BookEndpoint}}/fetch",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"{{BookEndpoint}}",
+						"fetch"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All book success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/{{BookEndpoint}}/fetch",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{BookEndpoint}}",
+								"fetch"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 01:04:03 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Get all book success\",\n    \"length\": 2,\n    \"data\": [\n        {\n            \"bookId\": 1,\n            \"title\": \"Một ngàn câu hỏi vì sao\",\n            \"price\": 133.23,\n            \"authorId\": 1,\n            \"author\": null,\n            \"publishedDate\": \"2024-12-22T00:00:00\"\n        },\n        {\n            \"bookId\": 2,\n            \"title\": \"Chân trời rực rỡ\",\n            \"price\": 999.99,\n            \"authorId\": 1,\n            \"author\": null,\n            \"publishedDate\": \"2025-01-02T00:00:00\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Get By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Host}}/{{BookEndpoint}}/fetch/1",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"{{BookEndpoint}}",
+						"fetch",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get By Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{Host}}/{{BookEndpoint}}/fetch/1",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{BookEndpoint}}",
+								"fetch",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 01:04:34 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Get book by id success\",\n    \"data\": {\n        \"bookId\": 1,\n        \"title\": \"Một ngàn câu hỏi vì sao\",\n        \"price\": 133.23,\n        \"authorId\": 1,\n        \"author\": {\n            \"authorId\": 1,\n            \"name\": \"Kieu Thanh Phat - Px4\",\n            \"bio\": \"No pain no gain !\",\n            \"books\": null\n        },\n        \"publishedDate\": \"2024-12-22T00:00:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Put Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookId\": \"1\",\r\n     \"title\": \"Một ngàn câu hỏi vì sao\",\r\n    \"price\": 555.55,\r\n    \"authorId\": 1,\r\n    \"author\": null,\r\n    \"publishedDate\": \"2024-12-22T20:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host}}/{{BookEndpoint}}/update",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"{{BookEndpoint}}",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Put Book",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookId\": \"1\",\r\n     \"title\": \"Một ngàn câu hỏi vì sao\",\r\n    \"price\": 555.55,\r\n    \"authorId\": 1,\r\n    \"author\": null,\r\n    \"publishedDate\": \"2024-12-22T20:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/{{BookEndpoint}}/update",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{BookEndpoint}}",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 01:30:25 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Update book successful\",\n    \"data\": {\n        \"bookId\": 1,\n        \"title\": \"Một ngàn câu hỏi vì sao\",\n        \"price\": 555.55,\n        \"authorId\": 1,\n        \"publishedDate\": \"2024-12-22T20:00:00\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"authorId\": 1,\r\n    \"name\": \"Kieu Thanh Phat - Px4\",\r\n    \"bio\": \"No pain no gain !\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Host}}/{{BookEndpoint}}/2",
+					"host": [
+						"{{Host}}"
+					],
+					"path": [
+						"{{BookEndpoint}}",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Book not exists",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"authorId\": 1,\r\n    \"name\": \"Kieu Thanh Phat - Px4\",\r\n    \"bio\": \"No pain no gain !\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/{{BookEndpoint}}/3",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{BookEndpoint}}",
+								"3"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 01:32:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Book not exists\"\n}"
+				},
+				{
+					"name": "Delete success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"authorId\": 1,\r\n    \"name\": \"Kieu Thanh Phat - Px4\",\r\n    \"bio\": \"No pain no gain !\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{Host}}/{{BookEndpoint}}/2",
+							"host": [
+								"{{Host}}"
+							],
+							"path": [
+								"{{BookEndpoint}}",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 27 Mar 2025 01:33:04 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Kestrel"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Delete book successful\",\n    \"data\": {\n        \"bookId\": 2,\n        \"title\": \"Chân trời rực rỡ\",\n        \"price\": 999.99,\n        \"authorId\": 1,\n        \"publishedDate\": \"2025-01-02T00:00:00\"\n    }\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Host",
+			"value": "https://localhost:7000",
+			"type": "string"
+		},
+		{
+			"key": "BookEndpoint",
+			"value": "api/books",
+			"type": "string"
+		}
+	]
+}
