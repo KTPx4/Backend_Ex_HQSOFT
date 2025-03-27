@@ -51,15 +51,15 @@ https://localhost:7000/api
 ### **1. Create a Book**
 **Endpoint:**
 ```
-POST /books
+POST /books/insert
 ```
 **Request Body:**
 ```json
 {
   "title": "Book Title",
-  "price": 19.99,
+  "price": 19.99,   
+  "publishedDate": "2024-03-20",
   "authorId": 1,
-  "publishedDate": "2024-03-20"
 }
 ```
 **Response:**
@@ -67,7 +67,7 @@ POST /books
 {
   "message": "Book created successfully",
   "data": {
-    "bookId": 1,
+    "bookId": 1,  
     "title": "Book Title",
     "price": 19.99,
     "authorId": 1,
@@ -105,6 +105,91 @@ PUT /books/update
 }
 ```
 
+### **3. Get all books**
+**Endpoint:**
+```
+GET /books/fetch
+```
+**Request Body:**
+```json
+{
+  
+}
+```
+**Response:**
+```json
+{
+  "message": "Get books successful",
+  "length": 2,
+  "data": [
+    {
+      "bookId": 1,
+      "title": "Updated Title",
+      "price": 24.99,
+      "authorId": 2,
+      "publishedDate": "2024-03-22"
+    },
+    {
+      "bookId": 2,
+      "title": "Book example 2",
+      "price": 34.22,
+      "authorId": 2,
+      "publishedDate": "2024-03-22"
+    }
+  ]
+}
+```
+
+### **4. Get book by Id**
+**Endpoint:**
+```
+GET /books/fetch/{BookId}
+```
+**Request Body:**
+```json
+{
+  
+}
+```
+**Response:**
+```json
+{
+  "message": "Get book successful",
+  "data": {
+      "bookId": 1,
+      "title": "Updated Title",
+      "price": 24.99,
+      "authorId": 2,
+      "publishedDate": "2024-03-22"
+    }
+}
+```
+
+### **5. Delete book by Id**
+**Endpoint:**
+```
+DELETE /books/fetch/{id}
+```
+**Request Body:**
+```json
+{
+  
+}
+```
+**Response:**
+```json
+{
+  "message": "Delete book successful",
+  "data": {
+      "bookId": 1,
+      "title": "Updated Title",
+      "price": 24.99,
+      "authorId": 2,
+      "publishedDate": "2024-03-22"
+    }
+}
+```
+
 ---
 
 ## **AuthorController**
@@ -126,7 +211,7 @@ POST /authors
 {
   "message": "Author created successfully",
   "data": {
-    "authorId": 1,
+    "authorId": 1,  
     "name": "Author Name",
     "bio": "Short biography"
   }
@@ -158,6 +243,85 @@ PUT /authors/update
 }
 ```
 
+### **3. Get all authors**
+**Endpoint:**
+```
+GET /authors/fetch
+```
+**Request Body:**
+```json
+{
+ 
+}
+```
+**Response:**
+```json
+{
+  "message": "Get authors successfully",
+  "length": 2,
+  "data": [
+    {
+      "authorId": 1,
+      "name": "Updated Name",
+      "bio": "Updated biography"
+    },
+    {
+        "authorId": 2,
+        "name": "Author example 2",
+        "bio": "example biography"
+    }
+  ]
+}
+```
+
+### **4. Get author by Id**
+**Endpoint:**
+```
+GET /authors/fetch/{AuthorId}
+```
+**Request Body:**
+```json
+{
+ 
+}
+```
+**Response:**
+```json
+{
+  "message": "Get author successfully",
+  "data":
+  {
+      "authorId": 1,
+      "name": "Updated Name",
+      "bio": "Updated biography"
+  }
+}
+```
+
+
+### **5. Delete author by Id**
+**Endpoint:**
+```
+DELETE /authors/fetch/{AuthorId}
+```
+**Request Body:**
+```json
+{
+ 
+}
+```
+**Response:**
+```json
+{
+  "message": "Delete author successfully", 
+  "data":
+  {
+      "authorId": 1,
+      "name": "Updated Name",
+      "bio": "Updated biography"
+  }
+}
+```
 ---
 
 ## **ReportController**
